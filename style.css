@@ -1,0 +1,291 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #081426, #142b46, #07111f);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.app {
+  width: 100%;
+  max-width: 780px;
+  height: 88vh;
+  min-height: 560px;
+  background: #f7f9fc;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 70px #0007;
+  color: #17243a;
+}
+
+.header {
+  background: #10243d;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-bottom: 3px solid #d6ad55;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background: #d6ad55;
+  color: #10243d;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 29px;
+}
+
+.brand h1 {
+  font-size: 23px;
+  letter-spacing: 0.5px;
+}
+
+.brand p {
+  color: #c6d4e5;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #54dc9b;
+  margin-right: 5px;
+}
+
+.clear-btn {
+  margin-left: auto;
+  border: 1px solid #718198;
+  color: white;
+  background: transparent;
+  border-radius: 8px;
+  padding: 9px 13px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #29415d;
+}
+
+.chat-area {
+  flex: 1;
+  padding: 22px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.welcome {
+  text-align: center;
+  margin: 2px auto 24px;
+  max-width: 470px;
+}
+
+.welcome-icon {
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+
+.welcome h2 {
+  font-size: 21px;
+  color: #10243d;
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #65738a;
+}
+
+.message {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  align-items: flex-start;
+}
+
+.message.user {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  background: #dce7f6;
+  color: #173554;
+  font-size: 17px;
+}
+
+.user .avatar {
+  background: #d6ad55;
+  color: #10243d;
+}
+
+.bubble {
+  max-width: 82%;
+  background: white;
+  border: 1px solid #e3e9f1;
+  padding: 13px 15px;
+  border-radius: 4px 15px 15px 15px;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  box-shadow: 0 3px 10px #182a3c08;
+}
+
+.user .bubble {
+  background: #173653;
+  color: white;
+  border: none;
+  border-radius: 15px 4px 15px 15px;
+}
+
+.time {
+  display: block;
+  font-size: 10px;
+  opacity: 0.6;
+  margin-top: 7px;
+}
+
+.suggestions {
+  padding: 12px 20px;
+  background: white;
+  border-top: 1px solid #e7ecf2;
+}
+
+.suggestions > p {
+  color: #6c788a;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chips button {
+  border: 1px solid #d8e1ed;
+  background: #f3f6fb;
+  color: #183654;
+  padding: 9px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.chips button:hover {
+  background: #173653;
+  color: white;
+  border-color: #173653;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  padding: 14px 18px;
+  background: white;
+}
+
+.input-area input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #d8e1ed;
+  border-radius: 13px;
+  outline: none;
+  font-size: 14px;
+  color: #17243a;
+}
+
+.input-area input:focus {
+  border-color: #c69b3c;
+  box-shadow: 0 0 0 3px #d6ad5525;
+}
+
+.send-btn {
+  width: 49px;
+  border: none;
+  border-radius: 13px;
+  background: #d6ad55;
+  color: #10243d;
+  font-size: 23px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.send-btn:hover {
+  background: #efc86d;
+  transform: translateY(-2px);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #edf0f4;
+  color: #7a8494;
+  font-size: 10px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+
+  .app {
+    height: 100dvh;
+    min-height: 0;
+    border-radius: 0;
+  }
+
+  .header {
+    padding: 15px;
+  }
+
+  .chat-area {
+    padding: 16px 12px;
+  }
+
+  .bubble {
+    max-width: 88%;
+    font-size: 13px;
+  }
+
+  .suggestions {
+    padding: 10px;
+  }
+
+  .chips {
+    gap: 6px;
+  }
+
+  .chips button {
+    padding: 8px 10px;
+  }
+}
